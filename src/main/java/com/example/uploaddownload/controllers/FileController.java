@@ -46,7 +46,7 @@ public class FileController {
 		return new UploadFileResponse(fileName, fileDownloadUri, file.getContentType(), file.getSize());
 	}
 	// metodo para uppar 2 ou mais arquivos
-	@PostMapping("/uploadMultiplesFiles")
+	@PostMapping("/uploadMultipleFiles")
 	public List<UploadFileResponse> uploadMultiplesFiles(@RequestParam("files")MultipartFile[] files){
 		return Arrays.asList(files)
 				.stream()
